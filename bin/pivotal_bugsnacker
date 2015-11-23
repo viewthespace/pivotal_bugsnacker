@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+
+require 'pivotal_bugsnacker'
+
+
+INBOX="1373502"
+LANDLORD="1440014"
+BROKER="1440012"
+LANDLORD_SUPPORT="1447966"
+BROKER_SUPPORT="1447964"
+DASI="1271502"
+DASI_SUPPORT="1448386"
+INTEGRATIONS="1239852"
+INTEGRATIONS_SUPPORT="1452152"
+TRACKER_PROJECT_IDS = [ INBOX, LANDLORD, BROKER, LANDLORD_SUPPORT, BROKER_SUPPORT, DASI, DASI_SUPPORT, INTEGRATIONS, INTEGRATIONS_SUPPORT ].freeze
+
+
+def tracker
+  @tracker ||= TrackerApi::Client.new token: (ENV['TRACKER_TOKEN'] || raise("missing TRACKER_TOKEN"))
+end
+
+def tracker_projects
+  @tracker_projects ||= TRACKER_PROJECT_IDS.map{ |project_id|  tracker.project(project_id) }
+end
+
+
+def story_in_project(tracker_project, id)
+  tracker_project.story(id)
+rescue TrackerApi::Error
+end
+
+def story(error)
+  tracker_projects.find do |tracker_project|
+    story_in_project(tracker_project, error.created_issue_url.split('/').last)
+  end
+end
+
+def bugsnag
+  @bugsnag ||= Bugsnag::Api::Client.new(auth_token: ENV['BUGSNAG_DEPLOY_API_KEY'])
+end
+
+def bugsnag_project
+  @bugsnag_project = Bugsnag::Api.projects.find{|p| p.name == 'www.viewthespace.com'}
+end
+
+errors = bugsnag.errors(bugsnag_project.id)
+
+#error = Bugsnag::Api.error("560dfa7815766f1ee31ff53c")
+#story(error)
+
