@@ -7,9 +7,28 @@ require 'tracker_api'
 
 module PivotalBugsnacker
 
-  def self.bugsnack!
-    Bugsnag.each_error do |bug|
+  class StoryUpdater
+
+    def initialize(story:, error:)
+      @story = story
+      @error = error
     end
+
+    def update!
+      @story.name = "[users:#{@error.users_effected},last_received:#{@error.last_received},occurrences:#{@error.occurrences}] #{@story.name}"
+    end
+
+  end
+
+  class << self
+    def bugsnack!
+      Bugsnag.each_error do |error|
+        story = Tracker.story_for_error(error)
+        StoryUpdater.new(story: story, error: error).update! if story
+      end
+    end
+
+
   end
 
   module Tracker
@@ -31,9 +50,9 @@ module PivotalBugsnacker
       def story_for_error error
         if error.created_issue_url
           story_id = error.created_issue_url.split('/').last
-          projects.find do |tracker_project|
-            story_in_project(tracker_project, story_id)
-          end
+          story = nil
+          projects.each{|p| story = story_in_project(p, story_id); break if story}
+          story
         end
       end
 
@@ -62,8 +81,16 @@ module PivotalBugsnacker
 
     class << self
 
+      def errors pages: 1
+        errors = []
+        each_error pages: pages do |error|
+          errors << error
+        end
+        errors
+      end
+
       def each_error pages:10
-        errors = client.errors(project.id, per_page: 30)
+        errors = client.errors(project.id, per_page: 30, most_recent_event: true)
         last_response = client.last_response
         count = 0
         loop do

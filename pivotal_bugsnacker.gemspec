@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry-byebug"
   spec.add_dependency 'bugsnag-api'
   spec.add_dependency 'tracker_api'
   spec.add_dependency 'multi_json'
