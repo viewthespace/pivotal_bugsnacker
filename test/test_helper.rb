@@ -1,0 +1,5 @@
+require 'pivotal_bugsnacker'
+require 'minitest/unit'
+require 'minitest/autorun'
+require 'minitest/pride'
+require 'minitest/spec'
