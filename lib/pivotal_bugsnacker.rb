@@ -15,6 +15,7 @@ module PivotalBugsnacker
     end
 
     def update!
+      @story.name.gsub! /^\[users:\d+.last_received:.*,occurrences:\d+\]\s*/, ''
       @story.name = "[users:#{@error.users_effected},last_received:#{@error.last_received},occurrences:#{@error.occurrences}] #{@story.name}"
     end
 

@@ -12,6 +12,7 @@ module PivotalBugsnacker
 
   describe StoryUpdater do
 
+
     let(:error) do
       OpenStruct.new({
         users_effected: 3,
@@ -20,14 +21,30 @@ module PivotalBugsnacker
       })
     end
 
-    let(:story) do
-      MockStory.new("Reminders mailer does not handle deals with only an office park")
+    describe 'no data on story' do
+      let(:story) do
+        MockStory.new("Reminders mailer does not handle deals with only an office park")
+      end
+
+      it 'updates the story name with important information' do
+        StoryUpdater.new(story:story, error: error).update!
+        story.name.must_equal "[users:3,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+      end
+
     end
 
-    it 'updates the story name with important information' do
-      StoryUpdater.new(story:story, error: error).update!
-      story.name.must_equal "[users:3,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+    describe 'some data on story' do
+      let(:story) do
+        MockStory.new "[users:2,last_received:2015-11-22T21:22:39.184Z,occurrences:3] Reminders mailer does not handle deals with only an office park"
+      end
+
+      it 'updates the story name with important information' do
+        StoryUpdater.new(story:story, error: error).update!
+        story.name.must_equal "[users:3,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+      end
+
     end
+
 
 
 
