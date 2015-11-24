@@ -16,9 +16,32 @@ module PivotalBugsnacker
 
     def update!
       @story.name.gsub! /^\[users:(\d+|na),last_received:.*,occurrences:\d+\]\s*/, ''
-      @story.name = "[users:#{@error.users_affected || 'na'},last_received:#{@error.last_received},occurrences:#{@error.occurrences}] #{@story.name}"
+      @story.name = "[users:#{users_affected},last_received:#{last_received},occurrences:#{occurrences}] #{@story.name}"
       @story.save
     end
+
+    private
+
+    def occurrences
+      @error.occurrences
+    end
+
+    def users_affected
+      @error.users_affected || 'na'
+    end
+
+    def last_received
+      DateTime.parse(@error.last_received).new_offset(etc_offset).strftime(date_time_format)
+    end
+
+    def etc_offset
+      Rational -5, 24
+    end
+
+    def date_time_format
+      "%m/%d/%Y %I:%M%p"
+    end
+
 
   end
 

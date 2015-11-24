@@ -28,19 +28,19 @@ module PivotalBugsnacker
 
       it 'updates the story name with important information' do
         StoryUpdater.new(story:story, error: error).update!
-        story.name.must_equal "[users:3,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+        story.name.must_equal "[users:3,last_received:11/23/2015 04:22PM,occurrences:5] Reminders mailer does not handle deals with only an office park"
       end
 
     end
 
     describe 'some data on story' do
       let(:story) do
-        MockStory.new "[users:2,last_received:2015-11-22T21:22:39.184Z,occurrences:3] Reminders mailer does not handle deals with only an office park"
+        MockStory.new "[users:2,last_received:11/22/2015 04:22PM,occurrences:3] Reminders mailer does not handle deals with only an office park"
       end
 
       it 'updates the story name with important information' do
         StoryUpdater.new(story:story, error: error).update!
-        story.name.must_equal "[users:3,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+        story.name.must_equal "[users:3,last_received:11/23/2015 04:22PM,occurrences:5] Reminders mailer does not handle deals with only an office park"
       end
 
     end
@@ -61,7 +61,7 @@ module PivotalBugsnacker
 
         it 'leaves users as na' do
           StoryUpdater.new(story:story, error: error).update!
-          story.name.must_equal "[users:na,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+          story.name.must_equal "[users:na,last_received:11/23/2015 04:22PM,occurrences:5] Reminders mailer does not handle deals with only an office park"
         end
 
       end
@@ -69,13 +69,13 @@ module PivotalBugsnacker
       describe 'story already has data on it' do
 
         let(:story) do
-          MockStory.new("[users:na,last_received:2015-11-22T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park")
+          MockStory.new("[users:na,last_received:11/22/2015 04:22PM,occurrences:5] Reminders mailer does not handle deals with only an office park")
         end
 
 
         it 'leaves users as na' do
           StoryUpdater.new(story:story, error: error).update!
-          story.name.must_equal "[users:na,last_received:2015-11-23T21:22:39.184Z,occurrences:5] Reminders mailer does not handle deals with only an office park"
+          story.name.must_equal "[users:na,last_received:11/23/2015 04:22PM,occurrences:5] Reminders mailer does not handle deals with only an office park"
         end
 
       end
