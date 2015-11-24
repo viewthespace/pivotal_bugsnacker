@@ -1,0 +1,651 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:04 GMT
+      X-Tracker-Project-Version:
+      - '12517'
+      X-Request-Id:
+      - 9f5ddf88835a53966617a6f221d07898
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"87b23dff0103c0a9abb0e11a693423d6"'
+      X-Runtime:
+      - '0.054393'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1373502,"kind":"project","name":"Request Inbox","version":12517,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-06-29T04:00:00Z","created_at":"2015-06-23T18:38:46Z","updated_at":"2015-06-23T19:01:18Z","account_id":630906,"current_iteration_number":22,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:04 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:04 GMT
+      X-Tracker-Project-Version:
+      - '3188'
+      X-Request-Id:
+      - 1f0f4c91fd95b5de1dc21741db44cf1f
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"d69ee709bc83184bc0c32ee7d4e3179b"'
+      X-Runtime:
+      - '0.047965'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1440014,"kind":"project","name":"Landlord - Core","version":3188,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":false,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":3,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":20,"public":false,"atom_enabled":false,"project_type":"private","start_date":"2015-10-05","start_time":"2015-10-05T04:00:00Z","created_at":"2015-09-30T13:45:56Z","updated_at":"2015-10-07T20:25:48Z","account_id":630906,"current_iteration_number":4,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:05 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:05 GMT
+      X-Tracker-Project-Version:
+      - '3678'
+      X-Request-Id:
+      - a7e64ffc56aaff9a38112a47bf256bdd
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"09f47c13a746a33ceea763ac4ce10bba"'
+      X-Runtime:
+      - '0.060919'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1440012,"kind":"project","name":"Broker - Core","version":3678,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-05T04:00:00Z","created_at":"2015-09-30T13:45:43Z","updated_at":"2015-11-04T14:13:53Z","account_id":630906,"current_iteration_number":4,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:05 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447966
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:06 GMT
+      X-Tracker-Project-Version:
+      - '958'
+      X-Request-Id:
+      - dec5e4c4662028c7d61ace93e1b3baa5
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"6e9948620daf98f490eb68be811a9ca8"'
+      X-Runtime:
+      - '0.041908'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1447966,"kind":"project","name":"Landlord Support","version":958,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-12T20:17:06Z","updated_at":"2015-11-18T20:08:15Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:06 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447964
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:06 GMT
+      X-Tracker-Project-Version:
+      - '1172'
+      X-Request-Id:
+      - b74203505d0a897bf2219c838e3ced46
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"04ca4d5be12febeb07417c2a63bf5f17"'
+      X-Runtime:
+      - '0.068401'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1447964,"kind":"project","name":"Broker Support","version":1172,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-12T20:16:52Z","updated_at":"2015-11-18T18:59:53Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:06 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1271502
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:07 GMT
+      X-Tracker-Project-Version:
+      - '6009'
+      X-Request-Id:
+      - 0e6d0546695244961d03808783ccc406
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"2011c7281860f1f9f64a81d0fe349e76"'
+      X-Runtime:
+      - '0.052591'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1271502,"kind":"project","name":"DASI","version":6009,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":false,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"description":"Data,
+        Admin tools, Security & Internal tools","enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-02-23T05:00:00Z","created_at":"2015-02-07T19:57:28Z","updated_at":"2015-11-19T20:30:44Z","account_id":630906,"current_iteration_number":20,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:08 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1448386
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:08 GMT
+      X-Tracker-Project-Version:
+      - '886'
+      X-Request-Id:
+      - e246568f2143b415e2949d9a3a3b922a
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"ae00ffa03e2c75237b6c36df33145250"'
+      X-Runtime:
+      - '0.040472'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1448386,"kind":"project","name":"DASI Support","version":886,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-13T13:46:27Z","updated_at":"2015-10-13T14:01:19Z","account_id":630906,"current_iteration_number":6,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:08 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1239852
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:09 GMT
+      X-Tracker-Project-Version:
+      - '5752'
+      X-Request-Id:
+      - f5f7f3ffacefb69604c18aba0a77fbc5
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"d7dc1a2f686097b4c355c1ea9742875e"'
+      X-Runtime:
+      - '0.058629'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1239852,"kind":"project","name":"Integrations","version":5752,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":20,"public":false,"atom_enabled":false,"project_type":"private","start_date":"2015-01-05","start_time":"2015-01-05T05:00:00Z","created_at":"2015-01-02T16:29:39Z","updated_at":"2015-10-06T15:20:22Z","account_id":630906,"current_iteration_number":47,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:09 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1452152
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:10 GMT
+      X-Tracker-Project-Version:
+      - '179'
+      X-Request-Id:
+      - 6d32a66b420ed370d79dfa2a570c3508
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"1b369d238b83cea4ca1c60e8420ab0f0"'
+      X-Runtime:
+      - '0.045419'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1452152,"kind":"project","name":"Integrations Support","version":179,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-11-09T05:00:00Z","created_at":"2015-10-19T14:07:46Z","updated_at":"2015-10-19T15:01:23Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:10 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502/stories/108294132
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 13:50:10 GMT
+      X-Request-Id:
+      - 8aa22f3912ac14ca7d556154028014fe
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.043498'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:10 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014/stories/108294132
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 13:50:11 GMT
+      X-Request-Id:
+      - 25654ae00b7f155f5d7580fe81b47c78
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.038655'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:11 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/108294132
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - <PIVOTAL_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 13:50:11 GMT
+      X-Tracker-Project-Version:
+      - '3678'
+      X-Request-Id:
+      - 4063322a60a90ed205272fc522b89296
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"652d11156cc7c497dbc94f342f64e09a"'
+      X-Runtime:
+      - '0.038026'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"kind":"story","id":108294132,"created_at":"2015-11-17T02:17:36Z","updated_at":"2015-11-19T15:31:51Z","story_type":"bug","name":"Reminders
+        mailer does not handle deals with only an office park","description":"*NoMethodError*
+        in *sidekiq#mailer*\nundefined method `street_address'' for nil:NilClass\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/564a53f515766f1ee3d30192?event_id=564a8d3a98c901df4613848a\n\n*Stacktrace:*\napp/models/reporting/notification.rb:42
+        - first_street_address\napp/mailers/messaging/activity_log_reminder_mailer.rb:12
+        - reminder\napp/services/messaging/reminder_scheduling_service.rb:59 - send_email\napp/services/messaging/reminder_scheduling_service.rb:12
+        - block in deliver_messages\napp/services/messaging/reminder_scheduling_service.rb:11
+        - deliver_messages\napp/background_jobs/jobs/messaging/email_reminder_job.rb:14
+        - perform\napp/workers/middleware/server/sidekiq_newrelic.rb:8 - call\napp/workers/middleware/server/set_paper_trail_user.rb:7
+        - call\nconfig/initializers/sidekiq.rb:20 - block in call\nconfig/initializers/sidekiq.rb:16
+        - call","current_state":"unscheduled","requested_by_id":1293888,"project_id":1440012,"url":"https://www.pivotaltracker.com/story/show/108294132","owner_ids":[],"labels":[{"id":12958346,"project_id":1440012,"kind":"label","name":"bugsnag","created_at":"2015-10-05T15:43:45Z","updated_at":"2015-10-05T15:43:45Z"}]}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 13:50:12 GMT
+recorded_with: VCR 3.0.0
