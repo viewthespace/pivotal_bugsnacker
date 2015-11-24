@@ -16,13 +16,14 @@ module PivotalBugsnacker
 
     def update!
       @story.name.gsub! /^\[users:\d+.last_received:.*,occurrences:\d+\]\s*/, ''
-      @story.name = "[users:#{@error.users_effected},last_received:#{@error.last_received},occurrences:#{@error.occurrences}] #{@story.name}"
+      @story.name = "[users:#{@error.users_affected},last_received:#{@error.last_received},occurrences:#{@error.occurrences}] #{@story.name}"
+      @story.save
     end
 
   end
 
   class << self
-    def bugsnack!
+    def bugsnack! pages:200, per_page: 30
       Bugsnag.each_error do |error|
         story = Tracker.story_for_error(error)
         StoryUpdater.new(story: story, error: error).update! if story

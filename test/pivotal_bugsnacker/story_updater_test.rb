@@ -15,7 +15,7 @@ module PivotalBugsnacker
 
     let(:error) do
       OpenStruct.new({
-        users_effected: 3,
+        users_affected: 3,
         last_received: "2015-11-23T21:22:39.184Z",
         occurrences: 5
       })
