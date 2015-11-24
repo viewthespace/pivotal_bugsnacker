@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'bugsnag-api'
   spec.add_dependency 'tracker_api'
   spec.add_dependency 'multi_json'
+  spec.add_dependency 'redis'
 end

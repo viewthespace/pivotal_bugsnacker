@@ -4,6 +4,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'bugsnag/api'
 require 'tracker_api'
+require 'redis'
 
 module PivotalBugsnacker
 
@@ -45,14 +46,43 @@ module PivotalBugsnacker
 
   end
 
+  module EventMemory
+
+    REDIS = ENV['REDIS_URL'] ? Redis.new(url: ENV["REDIS_URL"]) : Redis.new
+
+    class << self
+
+      def remember!(error)
+        REDIS.sadd('event_ids', error.most_recent_event.id)
+      end
+
+      def remember?(error)
+        REDIS.sismember 'event_ids', error.most_recent_event.id
+      end
+
+    end
+
+  end
+
+
   class << self
+
+
+
     def bugsnack! pages:200, per_page: 30
-      Bugsnag.each_error do |error|
-        story = Tracker.story_for_error(error)
-        StoryUpdater.new(story: story, error: error).update! if story
+      Bugsnag.each_error(pages: pages, per_page: per_page) do |error|
+        unless EventMemory.remember?(error)
+          story = Tracker.story_for_error(error)
+          if story
+            puts "updating story #{story.name}"
+            StoryUpdater.new(story: story, error: error).update!
+          end
+          EventMemory.remember!(error)
+        end
       end
     end
 
+    private
 
   end
 

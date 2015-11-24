@@ -1,0 +1,1669 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bugsnag.com/account/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Bugsnag API Ruby Gem 1.0.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <BUGSNAG_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 24 Nov 2015 19:56:49 GMT
+      Server:
+      - nginx + Phusion Passenger
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - Phusion Passenger
+      X-Request-Id:
+      - 717ebc9f-22c3-496a-95b0-39615f71d265
+      X-Runtime:
+      - '0.027565'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '571'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":"561c27257765623ed5004ee4","name":"Rails","type":"rails","created_at":"2015-10-12T21:33:25.219Z","updated_at":"2015-11-18T15:57:50.474Z","release_stages":[],"api_key":"413c6f82a4e77b4cf0726c717de00646","errors":0,"url":"https://api.bugsnag.com/projects/561c27257765623ed5004ee4","errors_url":"https://api.bugsnag.com/projects/561c27257765623ed5004ee4/errors","events_url":"https://api.bugsnag.com/projects/561c27257765623ed5004ee4/events","html_url":"https://bugsnag.com/51daaadda43ccd952c000008/rails-1","icon":"https://bugsnag.com/assets/images/frameworks/rails.png"},{"id":"554cc6dd7765622028002bf8","name":"sandbox.vts.com","type":"rails","created_at":"2015-05-08T14:23:25.805Z","updated_at":"2015-11-18T15:57:50.456Z","release_stages":["sandbox"],"api_key":"fd7dbf7013ee79b5e5c917e314d7ed4a","errors":223,"url":"https://api.bugsnag.com/projects/554cc6dd7765622028002bf8","errors_url":"https://api.bugsnag.com/projects/554cc6dd7765622028002bf8/errors","events_url":"https://api.bugsnag.com/projects/554cc6dd7765622028002bf8/events","html_url":"https://bugsnag.com/51daaadda43ccd952c000008/sandbox-dot-vts-dot-com","icon":"https://bugsnag.com/assets/images/frameworks/rails.png"},{"id":"51daaaf39bf39cd5c700000f","name":"www.viewthespace.com","type":"rails","created_at":"2013-07-08T12:05:07.223Z","updated_at":"2015-11-19T22:38:46.916Z","release_stages":["production","staging","development","sandbox"],"api_key":"041c46455a450610ba7dcd04d368d664","errors":2687,"url":"https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f","errors_url":"https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/errors","events_url":"https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/events","html_url":"https://bugsnag.com/51daaadda43ccd952c000008/www-dot-viewthespace-dot-com","icon":"https://bugsnag.com/assets/images/frameworks/rails.png"}]'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 19:56:49 GMT
+- request:
+    method: get
+    uri: https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/errors?most_recent_event=true&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Bugsnag API Ruby Gem 1.0.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <BUGSNAG_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 24 Nov 2015 19:56:49 GMT
+      Link:
+      - <https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/errors?direction=desc&most_recent_event=true&offset=2015-11-24T19%3A49%3A15.799Z&per_page=5&sort=last_received>;
+        rel="next"
+      Server:
+      - nginx + Phusion Passenger
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - Phusion Passenger
+      X-Request-Id:
+      - 7ec660dc-8ef6-4113-80a9-a14cccb32e2e
+      X-Runtime:
+      - '0.089969'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":"563cdbf015766f1ee3aa6e05","last_message":"Couldn''t find Space
+        with id=2042 [WHERE \"spaces\".\"removed\" = ''f'']","class":"ActiveRecord::RecordNotFound","occurrences":489,"release_stages":{"production":489},"last_context":"embedded_space_videos#show","resolved":false,"first_received":"2015-11-06T16:57:20.000Z","last_received":"2015-11-24T19:54:39.219Z","severity":"error","users_affected":93,"comments":1,"app_versions":{},"url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05","events_url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05","comments_url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/108437596","most_recent_event":{"id":"5654c07fa04221bf765331cf","received_at":"2015-11-24T19:54:39.000Z","user_id":"73.241.184.216","context":"embedded_space_videos#show","meta_data":{"Request":{"clientIp":"73.241.184.216","headers":{"Version":"HTTP/1.1","Host":"www.vts.com","Connection":"close","Accept":"text/html,
+        application/xhtml+xml, image/jxr, */*","Referer":"http://www.belvedereplace.com/vacancies.html","Accept-Language":"en-US","User-Agent":"Mozilla/5.0
+        (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135
+        Safari/537.36 Edge/12.10240","Accept-Encoding":"gzip, deflate","Cookie":"_viewthespace_session=ff4331f8f7025e6159cd9856cd70d02d;
+        XSRF-TOKEN=pw6BiTZNvkDWOXD4pQ5n5K3oEGmBAwehTFzv5Pfe1MeHnbVJ1fD9iha3wXh3ZxjqmdLIqTKp9fmCPou%2FufuoFQ%3D%3D;
+        __ar_v4=DQOS2Q4OOJFYNOQE7FUQ3U%3A20151124%3A2%7C4M7SRB7ECBAGBLZQ6WPRRG%3A20151124%3A2%7CQW5SZX5OUNFFDMQRVAKVX4%3A20151124%3A2;
+        __utma=254479823.258201215.1448394818.1448394818.1448394818.1; __utmb=254479823.2.10.1448394818;
+        __utmc=254479823; __utmz=254479823.1448394818.1.1.utmcsr=belvedereplace.com|utmccn=(referral)|utmcmd=referral|utmcct=/vacancies.html;
+        __utmt=1; kvcd=1448394851735; km_ai=REuWdq%2FgIE9%2BzXfIxfi%2F45a9O2U%3D;
+        km_uq=; km_vs=1; km_lv=1448394852","X-Request-Id":"8d21838f-bea4-42df-99ba-17cb36ded63f","X-Forwarded-For":"73.241.184.216","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","Via":"1.1
+        vegur","Connect-Time":"0","X-Request-Start":"1448394878790","Total-Route-Time":"0"},"httpMethod":"GET","params":{"partner_token":"2ftt1l7lo2k161t9tuxnxhjekwgax2o","video_height":"374","video_width":"665","autostart":"","action":"show","controller":"embedded_space_videos","space_id":"2-belvedere-place-3rd-floor-suite-350","id":"main","visit":"[OBJECT]"},"railsAction":"embedded_space_videos#show","referer":"http://www.belvedereplace.com/vacancies.html","url":"https://www.vts.com/spaces/2-belvedere-place-3rd-floor-suite-350/videos/main?partner_token=2ftt1l7lo2k161t9tuxnxhjekwgax2o&video_height=374&video_width=665&autostart="},"Session":{"_csrf_token":"IJM0wOO9Q8rAjrGA0ml/DjQ62MCzqvJYzmJkW04lfNI="},"Cookies":{"XSRF-TOKEN":"pw6BiTZNvkDWOXD4pQ5n5K3oEGmBAwehTFzv5Pfe1MeHnbVJ1fD9iha3wXh3ZxjqmdLIqTKp9fmCPou/ufuoFQ==","__ar_v4":"DQOS2Q4OOJFYNOQE7FUQ3U:20151124:2|4M7SRB7ECBAGBLZQ6WPRRG:20151124:2|QW5SZX5OUNFFDMQRVAKVX4:20151124:2","__utma":"254479823.258201215.1448394818.1448394818.1448394818.1","__utmb":"254479823.2.10.1448394818","__utmc":"254479823","__utmt":"1","__utmz":"254479823.1448394818.1.1.utmcsr=belvedereplace.com|utmccn=(referral)|utmcmd=referral|utmcct=/vacancies.html","_viewthespace_session":"ff4331f8f7025e6159cd9856cd70d02d","km_ai":"REuWdq/gIE9+zXfIxfi/45a9O2U=","km_lv":"1448394852","km_uq":"","km_vs":"1","kvcd":"1448394851735"},"User":{"id":"73.241.184.216"}},"severity":"error","exceptions":[{"class":"ActiveRecord::RecordNotFound","message":"Couldn''t
+        find Space with id=2041 [WHERE \"spaces\".\"removed\" = ''f'']","stackframes":[{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":344,"method":"find_one"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":93,"method":"block
+        in find_one"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":112,"method":"with_old_friendly_id"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":93,"method":"find_one"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":315,"method":"find_with_ids"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":107,"method":"find"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/querying.rb","line":5,"method":"find"},{"file":"app/controllers/embedded_space_videos_controller.rb","line":18,"method":"space_with_video"},{"file":"app/controllers/embedded_space_videos_controller.rb","line":10,"method":"show"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/implicit_render.rb","line":4,"method":"send_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/base.rb","line":167,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rendering.rb","line":10,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/callbacks.rb","line":18,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":581,"method":"block
+        (2 levels) in _run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":215,"method":"block
+        in _conditional_callback_around_9400"},{"file":"app/controllers/application_controller.rb","line":86,"method":"set_current_user"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":214,"method":"_conditional_callback_around_9400"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":569,"method":"block
+        in _run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":215,"method":"block
+        in _conditional_callback_around_9399"},{"file":"vendor/bundle/ruby/2.2.0/gems/browser-timezone-rails-0.1.00/lib/browser-timezone-rails.rb","line":17,"method":"set_time_zone"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":214,"method":"_conditional_callback_around_9399"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":469,"method":"_run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"__run_callback"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":385,"method":"_run_process_action_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":81,"method":"run_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/callbacks.rb","line":17,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rescue.rb","line":29,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/instrumentation.rb","line":30,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications.rb","line":123,"method":"block
+        in instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications/instrumenter.rb","line":20,"method":"instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications.rb","line":123,"method":"instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/instrumentation.rb","line":29,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/params_wrapper.rb","line":207,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/railties/controller_runtime.rb","line":18,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb","line":28,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb","line":361,"method":"perform_action_with_newrelic_trace"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb","line":23,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/base.rb","line":121,"method":"process"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/rendering.rb","line":45,"method":"process"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-mini-profiler-0.9.7/lib/mini_profiler/profiling_methods.rb","line":77,"method":"block
+        in profile_method"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal.rb","line":203,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rack_delegation.rb","line":14,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal.rb","line":246,"method":"block
+        in action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":73,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":73,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":36,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":68,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":56,"method":"each"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":56,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":608,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-pjax-0.8.0/lib/rack/pjax.rb","line":12,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/omniauth-1.2.2/lib/omniauth/strategy.rb","line":186,"method":"call!"},{"file":"vendor/bundle/ruby/2.2.0/gems/omniauth-1.2.2/lib/omniauth/strategy.rb","line":164,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-timeout-0.0.3/lib/rack/timeout.rb","line":16,"method":"block
+        in call"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":89,"method":"block
+        in timeout"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":99,"method":"call"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":99,"method":"timeout"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-timeout-0.0.3/lib/rack/timeout.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb","line":30,"method":"traced_call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb","line":32,"method":"traced_call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/flipper-0.7.0/lib/flipper/middleware/memoizer.rb","line":40,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":35,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":34,"method":"catch"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":34,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/best_standards_support.rb","line":17,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/etag.rb","line":23,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/breach-mitigation-rails-0.2.2/lib/breach_mitigation/length_hiding.rb","line":10,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/conditionalget.rb","line":25,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/head.rb","line":14,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/remotipart-1.2.1/lib/remotipart/middleware.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/params_parser.rb","line":21,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/flash.rb","line":242,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/session/abstract/id.rb","line":210,"method":"context"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/session/abstract/id.rb","line":205,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/cookies.rb","line":341,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/query_cache.rb","line":64,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/connection_adapters/abstract/connection_pool.rb","line":479,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/callbacks.rb","line":28,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"_run__4211785502196512198__call__859353732404081420__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"__run_callback"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":385,"method":"_run_call_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":81,"method":"run_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/callbacks.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/remote_ip.rb","line":31,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/debug_exceptions.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/show_exceptions.rb","line":56,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":32,"method":"call_app"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":16,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/tagged_logging.rb","line":22,"method":"tagged"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/request_store-1.1.0/lib/request_store/middleware.rb","line":8,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/request_id.rb","line":22,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/methodoverride.rb","line":21,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/runtime.rb","line":17,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/cache/strategy/local_cache.rb","line":72,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/lock.rb","line":15,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/deflater.rb","line":13,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-ssl-1.3.4/lib/rack/ssl.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":140,"method":"forward"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":249,"method":"fetch"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":189,"method":"lookup"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":66,"method":"call!"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":51,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/action_dispatch-gz_static-0.0.3/lib/action_dispatch/gz_static.rb","line":69,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/font_assets-0.1.10/lib/font_assets/middleware.rb","line":29,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/static.rb","line":119,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"lib/middleware/health.rb","line":11,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"lib/middleware/reject_methods.rb","line":12,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-rewrite-1.2.1/lib/rack/rewrite.rb","line":20,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-mini-profiler-0.9.7/lib/mini_profiler/profiler.rb","line":170,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/engine.rb","line":484,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/application.rb","line":231,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/railtie/configurable.rb","line":30,"method":"method_missing"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":580,"method":"process_client"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":674,"method":"worker_loop"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":529,"method":"spawn_missing_workers"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":140,"method":"start"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/bin/unicorn","line":126,"method":"<top
+        (required)>"},{"file":"vendor/bundle/ruby/2.2.0/bin/unicorn","line":23,"method":"load"},{"file":"vendor/bundle/ruby/2.2.0/bin/unicorn","line":23,"method":"<main>"}]}],"url":"https://api.bugsnag.com/events/5654c07fa04221bf765331cf","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05?event_id=5654c07fa04221bf765331cf"}},{"id":"55f1eb17687e12feb866f5d0","last_message":"Object
+        doesn''t support this action","class":"window.onerror","occurrences":28,"release_stages":{"production":28},"last_context":"/v2/","resolved":false,"first_received":"2015-09-10T20:41:59.000Z","last_received":"2015-11-24T19:51:28.505Z","severity":"error","users_affected":22,"comments":0,"app_versions":{},"url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0","events_url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1eb17687e12feb866f5d0","comments_url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0/comments","created_issue_url":null,"most_recent_event":{"id":"5654bfc0010c6b1508701048","received_at":"2015-11-24T19:51:28.000Z","user_id":"2434","context":"/v2/","meta_data":{"Request":{"clientIp":"206.155.89.2","url":"https://www.vts.com/v2/#/pipeline/deals"},"Device":{"browserName":"IE","browserVersion":"9.0.0","locale":"en-us","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64;
+        Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;
+        Media Center PC 6.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"802","target":"#document","type":"DOMContentLoaded"},"Script":{"content":"\n  /*<![CDATA[*/window.zEmbed||function(e,t){var
+        n,o,d,i,s,a=[],r=document.createElement(\"iframe\");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src=\"javascript:false\",r.title=\"\",r.role=\"presentation\",(r.frameElement||r).style.cssText=\"display:
+        none\",d=document.getElementsByTagName(\"script\"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src=''javascript:var
+        d=document.open();d.domain=\"''+n+''\";void(0);'',o=s}o.open()._l=function(){var
+        o=this.createElement(\"script\");n&&(this.domain=n),o.id=\"js-iframe-async\",o.src=e,this.t=+new
+        Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write(''<body
+        onload=\"document._l();\">''),o.close()}(\"https://assets.zendesk.com/embeddable_framework/main.js\",\"viewthespacehelp.zendesk.com\");/*]]>*/\n  \n  zE(function()
+        {\n    var userName = ''Scott Russi'';\n    var userEmail = ''scott.russi@cushwake.com'';\n    zE.identify({name:
+        userName, email: userEmail});\n  \n    zE.hide();\n  });\n","src":""},"User":{"email":"scott.russi@cushwake.com","id":"2434","name":"Scott
+        Russi"}},"severity":"error","exceptions":[{"class":"window.onerror","message":"Object
+        doesn''t support this action","stackframes":[{"file":"https://www.fullstory.com/s/fs.js","line":1272,"column":9,"method":"[unknown]"}]}],"url":"https://api.bugsnag.com/events/5654bfc0010c6b1508701048","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1eb17687e12feb866f5d0?event_id=5654bfc0010c6b1508701048"}},{"id":"5548e290ea1b57dee70c937e","last_message":"Access
+        is denied.\r\n","class":"window.onerror","occurrences":6029,"release_stages":{"production":6028},"last_context":"/v2/","resolved":false,"first_received":"2015-05-05T15:32:32.000Z","last_received":"2015-11-24T19:51:28.338Z","severity":"error","users_affected":403,"comments":7,"app_versions":{},"url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e","events_url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/5548e290ea1b57dee70c937e","comments_url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/94966498","most_recent_event":{"id":"5654bfc0010c6b1508701042","received_at":"2015-11-24T19:51:28.000Z","user_id":"2434","context":"/v2/","meta_data":{"Request":{"clientIp":"206.155.89.2","url":"https://www.vts.com/v2/#/pipeline/deals"},"Device":{"browserName":"IE","browserVersion":"9.0.0","locale":"en-us","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64;
+        Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;
+        Media Center PC 6.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"1068","target":"#document","type":"DOMContentLoaded"},"User":{"email":"scott.russi@cushwake.com","id":"2434","name":"Scott
+        Russi"}},"severity":"error","exceptions":[{"class":"window.onerror","message":"Access
+        is denied.\r\n","stackframes":[{"file":"https://www.vts.com/v2/","line":9,"column":13568,"method":"[unknown]"}]}],"url":"https://api.bugsnag.com/events/5654bfc0010c6b1508701042","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/5548e290ea1b57dee70c937e?event_id=5654bfc0010c6b1508701042"}},{"id":"55f1fc7b687e12feb8671d56","last_message":"Unable
+        to get property ''channel'' of undefined or null reference","class":"TypeError","occurrences":3,"release_stages":{"production":3},"last_context":"/building-profile/486/stacking-plan","resolved":false,"first_received":"2015-09-10T21:56:11.000Z","last_received":"2015-11-24T19:49:45.168Z","severity":"warning","users_affected":3,"comments":1,"app_versions":{},"url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56","events_url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1fc7b687e12feb8671d56","comments_url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56/comments","created_issue_url":null,"most_recent_event":{"id":"5654bf5957cc837b22c4ac7f","received_at":"2015-11-24T19:49:45.000Z","user_id":"9781","context":"/building-profile/486/stacking-plan","meta_data":{"Request":{"clientIp":"96.56.20.179","url":"https://www.vts.com/v2/building-profile/486/stacking-plan"},"Device":{"browserName":"IE","browserVersion":"10.0.0","locale":"en-US","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0;
+        SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center
+        PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"3","target":"<div
+        class=\"stacking-plan-nav-icon icon-download\">","type":"click","which":"1"},"User":{"email":"jenniferm@advancere.com","id":"9781","name":"Jennifer
+        Mercer"}},"severity":"warning","exceptions":[{"class":"TypeError","message":"Unable
+        to get property ''channel'' of undefined or null reference","stackframes":[{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":13584,"column":11,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":120,"column":103,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":210,"method":"$eval"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":131,"column":225,"method":"$digest"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":510,"method":"$apply"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":255,"column":34,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":36,"column":212,"method":"c"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":14206,"column":15,"method":"bugsnag"},{"file":"https://www.vts.com/v2/pipeline","line":9,"column":13568,"method":"nrWrapper"}]}],"url":"https://api.bugsnag.com/events/5654bf5957cc837b22c4ac7f","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1fc7b687e12feb8671d56?event_id=5654bf5957cc837b22c4ac7f"}},{"id":"561dbe8a15766f1ee349f2bb","last_message":"Unable
+        to set property ''_destroy'' of undefined or null reference","class":"TypeError","occurrences":318,"release_stages":{"production":318},"last_context":"/pipeline/deals?properties=4127","resolved":false,"first_received":"2015-10-14T02:31:38.000Z","last_received":"2015-11-24T19:49:15.799Z","severity":"warning","users_affected":201,"comments":9,"app_versions":{},"url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb","events_url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb","comments_url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/106881208","most_recent_event":{"id":"5654bf3b0043a293199c966d","received_at":"2015-11-24T19:49:15.000Z","user_id":"7433","context":"/pipeline/deals?properties=4127","meta_data":{"Request":{"clientIp":"67.154.96.162","url":"https://www.vts.com/v2/pipeline/deals?properties=4127"},"Device":{"browserName":"IE","browserVersion":"11.0.0","locale":"en-US","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET
+        CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0;
+        .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko"},"Last Event":{"millisecondsAgo":"6","target":"<input
+        name=\"tag_search_param\" class=\"tagfield-filter fieldset-input ng-untouched
+        ng-valid contact-input ng-dirty ng-valid-parse\" placeholder=\"Search by name,
+        email or add new\" ng-class=\"attrs.inputclass\" ng-style=\"filterWidth\"
+        ng-model=\"searchParam\" ng-change=\"handleOnChange()\" ng-blur=\"handleOnBlur($event)\"
+        ng-keyup=\"handleKeyup($event)\" ng-keydown=\"handleOnKeydown($event)\">","type":"keydown","which":"8"},"Script":{"content":"\n  /*<![CDATA[*/window.zEmbed||function(e,t){var
+        n,o,d,i,s,a=[],r=document.createElement(\"iframe\");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src=\"javascript:false\",r.title=\"\",r.role=\"presentation\",(r.frameElement||r).style.cssText=\"display:
+        none\",d=document.getElementsByTagName(\"script\"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src=''javascript:var
+        d=document.open();d.domain=\"''+n+''\";void(0);'',o=s}o.open()._l=function(){var
+        o=this.createElement(\"script\");n&&(this.domain=n),o.id=\"js-iframe-async\",o.src=e,this.t=+new
+        Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write(''<body
+        onload=\"document._l();\">''),o.close()}(\"https://assets.zendesk.com/embeddable_framework/main.js\",\"viewthespacehelp.zendesk.com\");/*]]>*/\n  \n  zE(function()
+        {\n    var userName = ''Carolyn Wheatley'';\n    var userEmail = ''carolyn.wheatley@cbre-ne.com'';\n    zE.identify({name:
+        userName, email: userEmail});\n  \n    zE.hide();\n  });\n","src":""},"User":{"email":"carolyn.wheatley@cbre-ne.com","id":"7433","name":"Carolyn
+        Wheatley"}},"severity":"warning","exceptions":[{"class":"TypeError","message":"Unable
+        to set property ''_destroy'' of undefined or null reference","stackframes":[{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":25906,"column":15,"method":"scope.deselect"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":25887,"column":19,"method":"scope.handleOnKeydown"},{"file":"Function
+        code","line":2,"column":317,"method":"fn"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":254,"column":485,"method":"f"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":210,"method":"n.prototype.$eval"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":439,"method":"n.prototype.$apply"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":255,"column":34,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":36,"column":212,"method":"c"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":14206,"column":15,"method":"_super.bugsnag"},{"file":"https://www.vts.com/v2/building-profile/4127/activity","line":9,"column":13599,"method":"nrWrapper"}]}],"url":"https://api.bugsnag.com/events/5654bf3b0043a293199c966d","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb?event_id=5654bf3b0043a293199c966d"}}]'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 19:56:49 GMT
+- request:
+    method: get
+    uri: https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/errors?most_recent_event=true&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Bugsnag API Ruby Gem 1.0.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <BUGSNAG_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 24 Nov 2015 19:56:49 GMT
+      Link:
+      - <https://api.bugsnag.com/projects/51daaaf39bf39cd5c700000f/errors?direction=desc&most_recent_event=true&offset=2015-11-24T19%3A49%3A15.799Z&per_page=5&sort=last_received>;
+        rel="next"
+      Server:
+      - nginx + Phusion Passenger
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - Phusion Passenger
+      X-Request-Id:
+      - 8a7e4ad9-fd7c-4dde-895a-641e0cd1b265
+      X-Runtime:
+      - '0.109712'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":"563cdbf015766f1ee3aa6e05","last_message":"Couldn''t find Space
+        with id=2042 [WHERE \"spaces\".\"removed\" = ''f'']","class":"ActiveRecord::RecordNotFound","occurrences":489,"release_stages":{"production":489},"last_context":"embedded_space_videos#show","resolved":false,"first_received":"2015-11-06T16:57:20.000Z","last_received":"2015-11-24T19:54:39.219Z","severity":"error","users_affected":93,"comments":1,"app_versions":{},"url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05","events_url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05","comments_url":"https://api.bugsnag.com/errors/563cdbf015766f1ee3aa6e05/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/108437596","most_recent_event":{"id":"5654c07fa04221bf765331cf","received_at":"2015-11-24T19:54:39.000Z","user_id":"73.241.184.216","context":"embedded_space_videos#show","meta_data":{"Request":{"clientIp":"73.241.184.216","headers":{"Version":"HTTP/1.1","Host":"www.vts.com","Connection":"close","Accept":"text/html,
+        application/xhtml+xml, image/jxr, */*","Referer":"http://www.belvedereplace.com/vacancies.html","Accept-Language":"en-US","User-Agent":"Mozilla/5.0
+        (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135
+        Safari/537.36 Edge/12.10240","Accept-Encoding":"gzip, deflate","Cookie":"_viewthespace_session=ff4331f8f7025e6159cd9856cd70d02d;
+        XSRF-TOKEN=pw6BiTZNvkDWOXD4pQ5n5K3oEGmBAwehTFzv5Pfe1MeHnbVJ1fD9iha3wXh3ZxjqmdLIqTKp9fmCPou%2FufuoFQ%3D%3D;
+        __ar_v4=DQOS2Q4OOJFYNOQE7FUQ3U%3A20151124%3A2%7C4M7SRB7ECBAGBLZQ6WPRRG%3A20151124%3A2%7CQW5SZX5OUNFFDMQRVAKVX4%3A20151124%3A2;
+        __utma=254479823.258201215.1448394818.1448394818.1448394818.1; __utmb=254479823.2.10.1448394818;
+        __utmc=254479823; __utmz=254479823.1448394818.1.1.utmcsr=belvedereplace.com|utmccn=(referral)|utmcmd=referral|utmcct=/vacancies.html;
+        __utmt=1; kvcd=1448394851735; km_ai=REuWdq%2FgIE9%2BzXfIxfi%2F45a9O2U%3D;
+        km_uq=; km_vs=1; km_lv=1448394852","X-Request-Id":"8d21838f-bea4-42df-99ba-17cb36ded63f","X-Forwarded-For":"73.241.184.216","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","Via":"1.1
+        vegur","Connect-Time":"0","X-Request-Start":"1448394878790","Total-Route-Time":"0"},"httpMethod":"GET","params":{"partner_token":"2ftt1l7lo2k161t9tuxnxhjekwgax2o","video_height":"374","video_width":"665","autostart":"","action":"show","controller":"embedded_space_videos","space_id":"2-belvedere-place-3rd-floor-suite-350","id":"main","visit":"[OBJECT]"},"railsAction":"embedded_space_videos#show","referer":"http://www.belvedereplace.com/vacancies.html","url":"https://www.vts.com/spaces/2-belvedere-place-3rd-floor-suite-350/videos/main?partner_token=2ftt1l7lo2k161t9tuxnxhjekwgax2o&video_height=374&video_width=665&autostart="},"Session":{"_csrf_token":"IJM0wOO9Q8rAjrGA0ml/DjQ62MCzqvJYzmJkW04lfNI="},"Cookies":{"XSRF-TOKEN":"pw6BiTZNvkDWOXD4pQ5n5K3oEGmBAwehTFzv5Pfe1MeHnbVJ1fD9iha3wXh3ZxjqmdLIqTKp9fmCPou/ufuoFQ==","__ar_v4":"DQOS2Q4OOJFYNOQE7FUQ3U:20151124:2|4M7SRB7ECBAGBLZQ6WPRRG:20151124:2|QW5SZX5OUNFFDMQRVAKVX4:20151124:2","__utma":"254479823.258201215.1448394818.1448394818.1448394818.1","__utmb":"254479823.2.10.1448394818","__utmc":"254479823","__utmt":"1","__utmz":"254479823.1448394818.1.1.utmcsr=belvedereplace.com|utmccn=(referral)|utmcmd=referral|utmcct=/vacancies.html","_viewthespace_session":"ff4331f8f7025e6159cd9856cd70d02d","km_ai":"REuWdq/gIE9+zXfIxfi/45a9O2U=","km_lv":"1448394852","km_uq":"","km_vs":"1","kvcd":"1448394851735"},"User":{"id":"73.241.184.216"}},"severity":"error","exceptions":[{"class":"ActiveRecord::RecordNotFound","message":"Couldn''t
+        find Space with id=2041 [WHERE \"spaces\".\"removed\" = ''f'']","stackframes":[{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":344,"method":"find_one"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":93,"method":"block
+        in find_one"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":112,"method":"with_old_friendly_id"},{"file":"vendor/bundle/ruby/2.2.0/bundler/gems/friendly_id-fda324aced8f/lib/friendly_id/history.rb","line":93,"method":"find_one"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":315,"method":"find_with_ids"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/relation/finder_methods.rb","line":107,"method":"find"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/querying.rb","line":5,"method":"find"},{"file":"app/controllers/embedded_space_videos_controller.rb","line":18,"method":"space_with_video"},{"file":"app/controllers/embedded_space_videos_controller.rb","line":10,"method":"show"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/implicit_render.rb","line":4,"method":"send_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/base.rb","line":167,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rendering.rb","line":10,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/callbacks.rb","line":18,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":581,"method":"block
+        (2 levels) in _run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":215,"method":"block
+        in _conditional_callback_around_9400"},{"file":"app/controllers/application_controller.rb","line":86,"method":"set_current_user"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":214,"method":"_conditional_callback_around_9400"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":569,"method":"block
+        in _run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":215,"method":"block
+        in _conditional_callback_around_9399"},{"file":"vendor/bundle/ruby/2.2.0/gems/browser-timezone-rails-0.1.00/lib/browser-timezone-rails.rb","line":17,"method":"set_time_zone"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":214,"method":"_conditional_callback_around_9399"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":469,"method":"_run__190653479311274877__process_action__1793994804012032336__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"__run_callback"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":385,"method":"_run_process_action_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":81,"method":"run_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/callbacks.rb","line":17,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rescue.rb","line":29,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/instrumentation.rb","line":30,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications.rb","line":123,"method":"block
+        in instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications/instrumenter.rb","line":20,"method":"instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/notifications.rb","line":123,"method":"instrument"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/instrumentation.rb","line":29,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/params_wrapper.rb","line":207,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/railties/controller_runtime.rb","line":18,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb","line":28,"method":"block
+        in process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/controller_instrumentation.rb","line":361,"method":"perform_action_with_newrelic_trace"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/rails3/action_controller.rb","line":23,"method":"process_action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/base.rb","line":121,"method":"process"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/abstract_controller/rendering.rb","line":45,"method":"process"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-mini-profiler-0.9.7/lib/mini_profiler/profiling_methods.rb","line":77,"method":"block
+        in profile_method"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal.rb","line":203,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal/rack_delegation.rb","line":14,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_controller/metal.rb","line":246,"method":"block
+        in action"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":73,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":73,"method":"dispatch"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":36,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":68,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":56,"method":"each"},{"file":"vendor/bundle/ruby/2.2.0/gems/journey-1.0.4/lib/journey/router.rb","line":56,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/routing/route_set.rb","line":608,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-pjax-0.8.0/lib/rack/pjax.rb","line":12,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/omniauth-1.2.2/lib/omniauth/strategy.rb","line":186,"method":"call!"},{"file":"vendor/bundle/ruby/2.2.0/gems/omniauth-1.2.2/lib/omniauth/strategy.rb","line":164,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-timeout-0.0.3/lib/rack/timeout.rb","line":16,"method":"block
+        in call"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":89,"method":"block
+        in timeout"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":99,"method":"call"},{"file":"vendor/ruby-2.2.2/lib/ruby/2.2.0/timeout.rb","line":99,"method":"timeout"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-timeout-0.0.3/lib/rack/timeout.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/agent_hooks.rb","line":30,"method":"traced_call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/rack/browser_monitoring.rb","line":32,"method":"traced_call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/flipper-0.7.0/lib/flipper/middleware/memoizer.rb","line":40,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":35,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":34,"method":"catch"},{"file":"vendor/bundle/ruby/2.2.0/gems/warden-1.2.3/lib/warden/manager.rb","line":34,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/best_standards_support.rb","line":17,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/etag.rb","line":23,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/breach-mitigation-rails-0.2.2/lib/breach_mitigation/length_hiding.rb","line":10,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/conditionalget.rb","line":25,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/head.rb","line":14,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/remotipart-1.2.1/lib/remotipart/middleware.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/params_parser.rb","line":21,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/flash.rb","line":242,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/session/abstract/id.rb","line":210,"method":"context"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/session/abstract/id.rb","line":205,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/cookies.rb","line":341,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/query_cache.rb","line":64,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activerecord-3.2.22/lib/active_record/connection_adapters/abstract/connection_pool.rb","line":479,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/callbacks.rb","line":28,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"_run__4211785502196512198__call__859353732404081420__callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":405,"method":"__run_callback"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":385,"method":"_run_call_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/callbacks.rb","line":81,"method":"run_callbacks"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/callbacks.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/remote_ip.rb","line":31,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/debug_exceptions.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/show_exceptions.rb","line":56,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":32,"method":"call_app"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":16,"method":"block
+        in call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/tagged_logging.rb","line":22,"method":"tagged"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/rack/logger.rb","line":16,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/request_store-1.1.0/lib/request_store/middleware.rb","line":8,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/actionpack-3.2.22/lib/action_dispatch/middleware/request_id.rb","line":22,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/methodoverride.rb","line":21,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/runtime.rb","line":17,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/activesupport-3.2.22/lib/active_support/cache/strategy/local_cache.rb","line":72,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/lock.rb","line":15,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/deflater.rb","line":13,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-ssl-1.3.4/lib/rack/ssl.rb","line":27,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":140,"method":"forward"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":249,"method":"fetch"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":189,"method":"lookup"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":66,"method":"call!"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-cache-1.5.1/lib/rack/cache/context.rb","line":51,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/action_dispatch-gz_static-0.0.3/lib/action_dispatch/gz_static.rb","line":69,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/font_assets-0.1.10/lib/font_assets/middleware.rb","line":29,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-1.4.7/lib/rack/static.rb","line":119,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"lib/middleware/health.rb","line":11,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"lib/middleware/reject_methods.rb","line":12,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-rewrite-1.2.1/lib/rack/rewrite.rb","line":20,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/rack-mini-profiler-0.9.7/lib/mini_profiler/profiler.rb","line":170,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/engine.rb","line":484,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/application.rb","line":231,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/railties-3.2.22/lib/rails/railtie/configurable.rb","line":30,"method":"method_missing"},{"file":"vendor/bundle/ruby/2.2.0/gems/newrelic_rpm-3.12.1.298/lib/new_relic/agent/instrumentation/middleware_tracing.rb","line":67,"method":"call"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":580,"method":"process_client"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":674,"method":"worker_loop"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":529,"method":"spawn_missing_workers"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/lib/unicorn/http_server.rb","line":140,"method":"start"},{"file":"vendor/bundle/ruby/2.2.0/gems/unicorn-4.9.0/bin/unicorn","line":126,"method":"<top
+        (required)>"},{"file":"vendor/bundle/ruby/2.2.0/bin/unicorn","line":23,"method":"load"},{"file":"vendor/bundle/ruby/2.2.0/bin/unicorn","line":23,"method":"<main>"}]}],"url":"https://api.bugsnag.com/events/5654c07fa04221bf765331cf","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05?event_id=5654c07fa04221bf765331cf"}},{"id":"55f1eb17687e12feb866f5d0","last_message":"Object
+        doesn''t support this action","class":"window.onerror","occurrences":28,"release_stages":{"production":28},"last_context":"/v2/","resolved":false,"first_received":"2015-09-10T20:41:59.000Z","last_received":"2015-11-24T19:51:28.505Z","severity":"error","users_affected":22,"comments":0,"app_versions":{},"url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0","events_url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1eb17687e12feb866f5d0","comments_url":"https://api.bugsnag.com/errors/55f1eb17687e12feb866f5d0/comments","created_issue_url":null,"most_recent_event":{"id":"5654bfc0010c6b1508701048","received_at":"2015-11-24T19:51:28.000Z","user_id":"2434","context":"/v2/","meta_data":{"Request":{"clientIp":"206.155.89.2","url":"https://www.vts.com/v2/#/pipeline/deals"},"Device":{"browserName":"IE","browserVersion":"9.0.0","locale":"en-us","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64;
+        Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;
+        Media Center PC 6.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"802","target":"#document","type":"DOMContentLoaded"},"Script":{"content":"\n  /*<![CDATA[*/window.zEmbed||function(e,t){var
+        n,o,d,i,s,a=[],r=document.createElement(\"iframe\");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src=\"javascript:false\",r.title=\"\",r.role=\"presentation\",(r.frameElement||r).style.cssText=\"display:
+        none\",d=document.getElementsByTagName(\"script\"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src=''javascript:var
+        d=document.open();d.domain=\"''+n+''\";void(0);'',o=s}o.open()._l=function(){var
+        o=this.createElement(\"script\");n&&(this.domain=n),o.id=\"js-iframe-async\",o.src=e,this.t=+new
+        Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write(''<body
+        onload=\"document._l();\">''),o.close()}(\"https://assets.zendesk.com/embeddable_framework/main.js\",\"viewthespacehelp.zendesk.com\");/*]]>*/\n  \n  zE(function()
+        {\n    var userName = ''Scott Russi'';\n    var userEmail = ''scott.russi@cushwake.com'';\n    zE.identify({name:
+        userName, email: userEmail});\n  \n    zE.hide();\n  });\n","src":""},"User":{"email":"scott.russi@cushwake.com","id":"2434","name":"Scott
+        Russi"}},"severity":"error","exceptions":[{"class":"window.onerror","message":"Object
+        doesn''t support this action","stackframes":[{"file":"https://www.fullstory.com/s/fs.js","line":1272,"column":9,"method":"[unknown]"}]}],"url":"https://api.bugsnag.com/events/5654bfc0010c6b1508701048","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1eb17687e12feb866f5d0?event_id=5654bfc0010c6b1508701048"}},{"id":"5548e290ea1b57dee70c937e","last_message":"Access
+        is denied.\r\n","class":"window.onerror","occurrences":6029,"release_stages":{"production":6028},"last_context":"/v2/","resolved":false,"first_received":"2015-05-05T15:32:32.000Z","last_received":"2015-11-24T19:51:28.338Z","severity":"error","users_affected":403,"comments":7,"app_versions":{},"url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e","events_url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/5548e290ea1b57dee70c937e","comments_url":"https://api.bugsnag.com/errors/5548e290ea1b57dee70c937e/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/94966498","most_recent_event":{"id":"5654bfc0010c6b1508701042","received_at":"2015-11-24T19:51:28.000Z","user_id":"2434","context":"/v2/","meta_data":{"Request":{"clientIp":"206.155.89.2","url":"https://www.vts.com/v2/#/pipeline/deals"},"Device":{"browserName":"IE","browserVersion":"9.0.0","locale":"en-us","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64;
+        Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;
+        Media Center PC 6.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"1068","target":"#document","type":"DOMContentLoaded"},"User":{"email":"scott.russi@cushwake.com","id":"2434","name":"Scott
+        Russi"}},"severity":"error","exceptions":[{"class":"window.onerror","message":"Access
+        is denied.\r\n","stackframes":[{"file":"https://www.vts.com/v2/","line":9,"column":13568,"method":"[unknown]"}]}],"url":"https://api.bugsnag.com/events/5654bfc0010c6b1508701042","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/5548e290ea1b57dee70c937e?event_id=5654bfc0010c6b1508701042"}},{"id":"55f1fc7b687e12feb8671d56","last_message":"Unable
+        to get property ''channel'' of undefined or null reference","class":"TypeError","occurrences":3,"release_stages":{"production":3},"last_context":"/building-profile/486/stacking-plan","resolved":false,"first_received":"2015-09-10T21:56:11.000Z","last_received":"2015-11-24T19:49:45.168Z","severity":"warning","users_affected":3,"comments":1,"app_versions":{},"url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56","events_url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1fc7b687e12feb8671d56","comments_url":"https://api.bugsnag.com/errors/55f1fc7b687e12feb8671d56/comments","created_issue_url":null,"most_recent_event":{"id":"5654bf5957cc837b22c4ac7f","received_at":"2015-11-24T19:49:45.000Z","user_id":"9781","context":"/building-profile/486/stacking-plan","meta_data":{"Request":{"clientIp":"96.56.20.179","url":"https://www.vts.com/v2/building-profile/486/stacking-plan"},"Device":{"browserName":"IE","browserVersion":"10.0.0","locale":"en-US","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0;
+        SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center
+        PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)"},"Last Event":{"millisecondsAgo":"3","target":"<div
+        class=\"stacking-plan-nav-icon icon-download\">","type":"click","which":"1"},"User":{"email":"jenniferm@advancere.com","id":"9781","name":"Jennifer
+        Mercer"}},"severity":"warning","exceptions":[{"class":"TypeError","message":"Unable
+        to get property ''channel'' of undefined or null reference","stackframes":[{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":13584,"column":11,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":120,"column":103,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":210,"method":"$eval"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":131,"column":225,"method":"$digest"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":510,"method":"$apply"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":255,"column":34,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":36,"column":212,"method":"c"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":14206,"column":15,"method":"bugsnag"},{"file":"https://www.vts.com/v2/pipeline","line":9,"column":13568,"method":"nrWrapper"}]}],"url":"https://api.bugsnag.com/events/5654bf5957cc837b22c4ac7f","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/55f1fc7b687e12feb8671d56?event_id=5654bf5957cc837b22c4ac7f"}},{"id":"561dbe8a15766f1ee349f2bb","last_message":"Unable
+        to set property ''_destroy'' of undefined or null reference","class":"TypeError","occurrences":318,"release_stages":{"production":318},"last_context":"/pipeline/deals?properties=4127","resolved":false,"first_received":"2015-10-14T02:31:38.000Z","last_received":"2015-11-24T19:49:15.799Z","severity":"warning","users_affected":201,"comments":9,"app_versions":{},"url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb","events_url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb/events","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb","comments_url":"https://api.bugsnag.com/errors/561dbe8a15766f1ee349f2bb/comments","created_issue_url":"https://www.pivotaltracker.com/story/show/106881208","most_recent_event":{"id":"5654bf3b0043a293199c966d","received_at":"2015-11-24T19:49:15.000Z","user_id":"7433","context":"/pipeline/deals?properties=4127","meta_data":{"Request":{"clientIp":"67.154.96.162","url":"https://www.vts.com/v2/pipeline/deals?properties=4127"},"Device":{"browserName":"IE","browserVersion":"11.0.0","locale":"en-US","osName":"Windows
+        7","userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET
+        CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0;
+        .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko"},"Last Event":{"millisecondsAgo":"6","target":"<input
+        name=\"tag_search_param\" class=\"tagfield-filter fieldset-input ng-untouched
+        ng-valid contact-input ng-dirty ng-valid-parse\" placeholder=\"Search by name,
+        email or add new\" ng-class=\"attrs.inputclass\" ng-style=\"filterWidth\"
+        ng-model=\"searchParam\" ng-change=\"handleOnChange()\" ng-blur=\"handleOnBlur($event)\"
+        ng-keyup=\"handleKeyup($event)\" ng-keydown=\"handleOnKeydown($event)\">","type":"keydown","which":"8"},"Script":{"content":"\n  /*<![CDATA[*/window.zEmbed||function(e,t){var
+        n,o,d,i,s,a=[],r=document.createElement(\"iframe\");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src=\"javascript:false\",r.title=\"\",r.role=\"presentation\",(r.frameElement||r).style.cssText=\"display:
+        none\",d=document.getElementsByTagName(\"script\"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src=''javascript:var
+        d=document.open();d.domain=\"''+n+''\";void(0);'',o=s}o.open()._l=function(){var
+        o=this.createElement(\"script\");n&&(this.domain=n),o.id=\"js-iframe-async\",o.src=e,this.t=+new
+        Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write(''<body
+        onload=\"document._l();\">''),o.close()}(\"https://assets.zendesk.com/embeddable_framework/main.js\",\"viewthespacehelp.zendesk.com\");/*]]>*/\n  \n  zE(function()
+        {\n    var userName = ''Carolyn Wheatley'';\n    var userEmail = ''carolyn.wheatley@cbre-ne.com'';\n    zE.identify({name:
+        userName, email: userEmail});\n  \n    zE.hide();\n  });\n","src":""},"User":{"email":"carolyn.wheatley@cbre-ne.com","id":"7433","name":"Carolyn
+        Wheatley"}},"severity":"warning","exceptions":[{"class":"TypeError","message":"Unable
+        to set property ''_destroy'' of undefined or null reference","stackframes":[{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":25906,"column":15,"method":"scope.deselect"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":25887,"column":19,"method":"scope.handleOnKeydown"},{"file":"Function
+        code","line":2,"column":317,"method":"fn"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":254,"column":485,"method":"f"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":210,"method":"n.prototype.$eval"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":134,"column":439,"method":"n.prototype.$apply"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":255,"column":34,"method":"Anonymous
+        function"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":36,"column":212,"method":"c"},{"file":"https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-03fa27cad1189252cea5f6795626198a.js","line":14206,"column":15,"method":"_super.bugsnag"},{"file":"https://www.vts.com/v2/building-profile/4127/activity","line":9,"column":13599,"method":"nrWrapper"}]}],"url":"https://api.bugsnag.com/events/5654bf3b0043a293199c966d","html_url":"https://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb?event_id=5654bf3b0043a293199c966d"}}]'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 19:56:49 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:32 GMT
+      X-Tracker-Project-Version:
+      - '12657'
+      X-Request-Id:
+      - bc2b885b555f132d475e8784be4058f0
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"57095ea8399877f9affdf2397e1771f1"'
+      X-Runtime:
+      - '0.070210'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1373502,"kind":"project","name":"Request Inbox","version":12657,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-06-29T04:00:00Z","created_at":"2015-06-23T18:38:46Z","updated_at":"2015-06-23T19:01:18Z","account_id":630906,"current_iteration_number":22,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:32 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:33 GMT
+      X-Tracker-Project-Version:
+      - '3288'
+      X-Request-Id:
+      - 38963088d082b385a4b25ab54a4947e2
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"971dba94249b15fabced982080ec1897"'
+      X-Runtime:
+      - '0.049325'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1440014,"kind":"project","name":"Landlord - Core","version":3288,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":false,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":3,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":20,"public":false,"atom_enabled":false,"project_type":"private","start_date":"2015-10-05","start_time":"2015-10-05T04:00:00Z","created_at":"2015-09-30T13:45:56Z","updated_at":"2015-10-07T20:25:48Z","account_id":630906,"current_iteration_number":4,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:33 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:33 GMT
+      X-Tracker-Project-Version:
+      - '3841'
+      X-Request-Id:
+      - 23f1d0b245b95aa7a655d9e61e827477
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"782b68c477ec490720e3eafc24e664f8"'
+      X-Runtime:
+      - '0.054744'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1440012,"kind":"project","name":"Broker - Core","version":3841,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-05T04:00:00Z","created_at":"2015-09-30T13:45:43Z","updated_at":"2015-11-04T14:13:53Z","account_id":630906,"current_iteration_number":4,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:33 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447966
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:33 GMT
+      X-Tracker-Project-Version:
+      - '1011'
+      X-Request-Id:
+      - 53a2eee88c9b386dc08b44ae315dd743
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"1053c5957bd325325688ee7cda13709f"'
+      X-Runtime:
+      - '0.048574'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1447966,"kind":"project","name":"Landlord Support","version":1011,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-12T20:17:06Z","updated_at":"2015-11-18T20:08:15Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:33 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447964
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:34 GMT
+      X-Tracker-Project-Version:
+      - '1285'
+      X-Request-Id:
+      - 34c314833c8437db3b4a345211dd24fd
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"8468834fda2bedbee29b59c15dfab229"'
+      X-Runtime:
+      - '0.040269'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1447964,"kind":"project","name":"Broker Support","version":1285,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-12T20:16:52Z","updated_at":"2015-11-18T18:59:53Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:34 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1271502
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:34 GMT
+      X-Tracker-Project-Version:
+      - '6106'
+      X-Request-Id:
+      - 421f1075964abc6c3fc6365eea9f753d
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"be807318c3405a93b3e256a5e1c5e699"'
+      X-Runtime:
+      - '0.046389'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1271502,"kind":"project","name":"DASI","version":6106,"iteration_length":2,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":false,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"description":"Data,
+        Admin tools, Security & Internal tools","enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-02-23T05:00:00Z","created_at":"2015-02-07T19:57:28Z","updated_at":"2015-11-19T20:30:44Z","account_id":630906,"current_iteration_number":20,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:34 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1448386
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:34 GMT
+      X-Tracker-Project-Version:
+      - '942'
+      X-Request-Id:
+      - ae20c744e8914b4cc730479000ce7f4b
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"ba6abfc286fc6604219e9e2a27e9159a"'
+      X-Runtime:
+      - '0.042706'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1448386,"kind":"project","name":"DASI Support","version":942,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-10-19T04:00:00Z","created_at":"2015-10-13T13:46:27Z","updated_at":"2015-10-13T14:01:19Z","account_id":630906,"current_iteration_number":6,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:35 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1239852
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:35 GMT
+      X-Tracker-Project-Version:
+      - '5765'
+      X-Request-Id:
+      - ec41c42a207490838f940ccf22ab4796
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"49cf0dda865ee75814acf6ec80b7643f"'
+      X-Runtime:
+      - '0.050281'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1239852,"kind":"project","name":"Integrations","version":5765,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3,5,8","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":20,"public":false,"atom_enabled":false,"project_type":"private","start_date":"2015-01-05","start_time":"2015-01-05T05:00:00Z","created_at":"2015-01-02T16:29:39Z","updated_at":"2015-10-06T15:20:22Z","account_id":630906,"current_iteration_number":47,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:35 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1452152
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:35 GMT
+      X-Tracker-Project-Version:
+      - '180'
+      X-Request-Id:
+      - 983dfbf73658f890fe84e1be76fab678
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"82cc5a9e859d9864df0956c4839a6e0f"'
+      X-Runtime:
+      - '0.056038'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"id":1452152,"kind":"project","name":"Integrations Support","version":180,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/New_York","offset":"-05:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":12,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2015-11-09T05:00:00Z","created_at":"2015-10-19T14:07:46Z","updated_at":"2015-10-19T15:01:23Z","account_id":630906,"current_iteration_number":3,"enable_following":true}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:35 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502/stories/108437596
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:36 GMT
+      X-Request-Id:
+      - 07e2fcff1dff6f1ac0f5eac280f70cf1
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.059214'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:36 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014/stories/108437596
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:36 GMT
+      X-Request-Id:
+      - 274af66f9d4fe3ff2c8c1f6c731ac973
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.043584'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:36 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/108437596
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:36 GMT
+      X-Tracker-Project-Version:
+      - '3841'
+      X-Request-Id:
+      - 5e12afbef688090e3775aa369b3bf23f
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"9fde785cdae8a7532866b707ebbe9942"'
+      X-Runtime:
+      - '0.054638'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"kind":"story","id":108437596,"created_at":"2015-11-18T14:03:34Z","updated_at":"2015-11-24T19:55:47Z","story_type":"bug","name":"[users:93,last_received:11/24/2015
+        02:54PM,occurrences:489] No video for removed space","description":"*ActiveRecord::RecordNotFound*
+        in *embedded_space_videos#show*\nCouldn''t find Space with id=451 [WHERE \"spaces\".\"removed\"
+        = ''f'']\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05?event_id=564c7f4a863138ff13bc068a\n\n*Stacktrace:*\napp/controllers/embedded_space_videos_controller.rb:18
+        - space_with_video\napp/controllers/embedded_space_videos_controller.rb:10
+        - show\napp/controllers/application_controller.rb:87 - set_current_user\nlib/middleware/health.rb:11
+        - call\nlib/middleware/reject_methods.rb:12 - call","current_state":"unscheduled","requested_by_id":1293888,"project_id":1440012,"url":"https://www.pivotaltracker.com/story/show/108437596","owner_ids":[],"labels":[{"id":12958346,"project_id":1440012,"kind":"label","name":"bugsnag","created_at":"2015-10-05T15:43:45Z","updated_at":"2015-10-05T15:43:45Z"},{"id":13406774,"project_id":1440012,"kind":"label","name":"major","created_at":"2015-11-24T19:41:29Z","updated_at":"2015-11-24T19:41:29Z"}]}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:37 GMT
+- request:
+    method: put
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/108437596
+    body:
+      encoding: UTF-8
+      string: '{"follower_ids":[],"name":"[users:93,last_received:11/24/2015 02:54PM,occurrences:489]
+        No video for removed space","description":"*ActiveRecord::RecordNotFound*
+        in *embedded_space_videos#show*\nCouldn''t find Space with id=451 [WHERE \"spaces\".\"removed\"
+        = ''f'']\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05?event_id=564c7f4a863138ff13bc068a\n\n*Stacktrace:*\napp/controllers/embedded_space_videos_controller.rb:18
+        - space_with_video\napp/controllers/embedded_space_videos_controller.rb:10
+        - show\napp/controllers/application_controller.rb:87 - set_current_user\nlib/middleware/health.rb:11
+        - call\nlib/middleware/reject_methods.rb:12 - call","story_type":"bug","current_state":"unscheduled","requested_by_id":1293888,"owner_ids":[],"labels":[{"id":12958346,"name":"bugsnag"},{"id":13406774,"name":"major"}]}'
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:37 GMT
+      X-Tracker-Project-Version:
+      - '3841'
+      X-Request-Id:
+      - 4fbf518e205a8f6fe04aec98b0a1eaa2
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"2a81557e284a50eec122c754aa667f15"'
+      X-Runtime:
+      - '0.189691'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"kind":"story","id":108437596,"project_id":1440012,"name":"[users:93,last_received:11/24/2015
+        02:54PM,occurrences:489] No video for removed space","description":"*ActiveRecord::RecordNotFound*
+        in *embedded_space_videos#show*\nCouldn''t find Space with id=451 [WHERE \"spaces\".\"removed\"
+        = ''f'']\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/563cdbf015766f1ee3aa6e05?event_id=564c7f4a863138ff13bc068a\n\n*Stacktrace:*\napp/controllers/embedded_space_videos_controller.rb:18
+        - space_with_video\napp/controllers/embedded_space_videos_controller.rb:10
+        - show\napp/controllers/application_controller.rb:87 - set_current_user\nlib/middleware/health.rb:11
+        - call\nlib/middleware/reject_methods.rb:12 - call","story_type":"bug","current_state":"unscheduled","requested_by_id":1293888,"owner_ids":[],"labels":[{"kind":"label","id":12958346,"project_id":1440012,"name":"bugsnag","created_at":"2015-10-05T15:43:45Z","updated_at":"2015-10-05T15:43:45Z"},{"kind":"label","id":13406774,"project_id":1440012,"name":"major","created_at":"2015-11-24T19:41:29Z","updated_at":"2015-11-24T19:41:29Z"}],"created_at":"2015-11-18T14:03:34Z","updated_at":"2015-11-24T19:55:47Z","url":"https://www.pivotaltracker.com/story/show/108437596"}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:37 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:38 GMT
+      X-Request-Id:
+      - 51f06785ccee2d7ed5dabff21f5824e6
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.060620'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:38 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:38 GMT
+      X-Request-Id:
+      - bfe0631393ddd6afb5dbbdec2e168e4e
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.068206'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:38 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:38 GMT
+      X-Request-Id:
+      - 8c39899099480a73224cac355258d106
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.046094'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:38 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447966/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:39 GMT
+      X-Request-Id:
+      - f27f5de43a387c5612fad9580779593b
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.041628'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:39 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1447964/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:39 GMT
+      X-Request-Id:
+      - ae6837af4c3359a5063557268d871fb4
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.044940'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:39 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1271502/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:40 GMT
+      X-Request-Id:
+      - 7dc0896fa876c23b1fdcadc4f4aff3b8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.078169'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:40 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1448386/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:40 GMT
+      X-Request-Id:
+      - 2e9322dfa24c7db79d68d0c217a96646
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.038938'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:40 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1239852/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:40 GMT
+      X-Request-Id:
+      - 4e94847a5b70ef7d7083f2ef288ce3d9
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.036073'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:40 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1452152/stories/94966498
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:41 GMT
+      X-Request-Id:
+      - d25fda99bf6fbd25e9bc3a21f8f4089e
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.041018'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:41 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1373502/stories/106881208
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:41 GMT
+      X-Request-Id:
+      - 786789c955ad04acac78823cb3d52a1d
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.058678'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:41 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440014/stories/106881208
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 24 Nov 2015 21:02:42 GMT
+      X-Request-Id:
+      - e10ceae81575e0e3cd2469b63ce8763d
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.079380'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"code":"unfound_resource","kind":"error","error":"The object you tried
+        to access could not be found.  It may have been removed by another user, you
+        may be using the ID of another object type, or you may be trying to access
+        a sub-resource at the wrong point in a tree."}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:42 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/106881208
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:42 GMT
+      X-Tracker-Project-Version:
+      - '3841'
+      X-Request-Id:
+      - 810dbd94afa2b8846c599f9a8bea1423
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"b8fb75a72c65dd291f41d203b4656ab0"'
+      X-Runtime:
+      - '0.049873'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"kind":"story","id":106881208,"created_at":"2015-10-28T19:11:58Z","updated_at":"2015-11-24T19:53:39Z","story_type":"bug","name":"[users:201,last_received:11/24/2015
+        02:49PM,occurrences:318] Noisy JS Error in Custom Tagfield Directive Used
+        in Requirement Fieldset","description":"*TypeError* in */tims/team-list*\nCannot
+        set property ''_destroy'' of undefined\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb?event_id=56311d2739fb4667752ad8c3\n\n*Stacktrace:*\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21980
+        - n.scope.deselect\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21961
+        - n.scope.handleOnKeydown\neval at <anonymous> (https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:213:409),
+        <anonymous>:4 - fn","current_state":"unscheduled","requested_by_id":1293888,"project_id":1440012,"url":"https://www.pivotaltracker.com/story/show/106881208","owner_ids":[],"labels":[{"id":12958346,"project_id":1440012,"kind":"label","name":"bugsnag","created_at":"2015-10-05T15:43:45Z","updated_at":"2015-10-05T15:43:45Z"}]}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:42 GMT
+- request:
+    method: put
+    uri: https://www.pivotaltracker.com/services/v5/projects/1440012/stories/106881208
+    body:
+      encoding: UTF-8
+      string: '{"follower_ids":[],"name":"[users:201,last_received:11/24/2015 02:49PM,occurrences:318]
+        Noisy JS Error in Custom Tagfield Directive Used in Requirement Fieldset","description":"*TypeError*
+        in */tims/team-list*\nCannot set property ''_destroy'' of undefined\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb?event_id=56311d2739fb4667752ad8c3\n\n*Stacktrace:*\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21980
+        - n.scope.deselect\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21961
+        - n.scope.handleOnKeydown\neval at <anonymous> (https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:213:409),
+        <anonymous>:4 - fn","story_type":"bug","current_state":"unscheduled","requested_by_id":1293888,"owner_ids":[],"labels":[{"id":12958346,"name":"bugsnag"}]}'
+    headers:
+      User-Agent:
+      - Ruby/2.1.5 (x86_64-darwin14.0; ruby) TrackerApi/0.2.11 Faraday/0.9.2
+      X-Trackertoken:
+      - 2f7ddd5d9490c6cbde8fcde4ea10efe6
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Tue, 24 Nov 2015 21:02:43 GMT
+      X-Tracker-Project-Version:
+      - '3841'
+      X-Request-Id:
+      - 72385399094817d8eb2cf5e59bc022f6
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"771869591f8bf4eaa6834c5d93e3199a"'
+      X-Runtime:
+      - '0.191580'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger Enterprise
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: '{"kind":"story","id":106881208,"project_id":1440012,"name":"[users:201,last_received:11/24/2015
+        02:49PM,occurrences:318] Noisy JS Error in Custom Tagfield Directive Used
+        in Requirement Fieldset","description":"*TypeError* in */tims/team-list*\nCannot
+        set property ''_destroy'' of undefined\nhttps://bugsnag.com/vts-1/www-dot-viewthespace-dot-com/errors/561dbe8a15766f1ee349f2bb?event_id=56311d2739fb4667752ad8c3\n\n*Stacktrace:*\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21980
+        - n.scope.deselect\nhttps://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:21961
+        - n.scope.handleOnKeydown\neval at <anonymous> (https://vts-herokuapp-com.global.ssl.fastly.net/assets/horse-99bdbb71e8e94a8347580793749a6197.js:213:409),
+        <anonymous>:4 - fn","story_type":"bug","current_state":"unscheduled","requested_by_id":1293888,"owner_ids":[],"labels":[{"kind":"label","id":12958346,"project_id":1440012,"name":"bugsnag","created_at":"2015-10-05T15:43:45Z","updated_at":"2015-10-05T15:43:45Z"}],"created_at":"2015-10-28T19:11:58Z","updated_at":"2015-11-24T19:53:39Z","url":"https://www.pivotaltracker.com/story/show/106881208"}'
+    http_version:
+  recorded_at: Tue, 24 Nov 2015 21:02:43 GMT
+recorded_with: VCR 3.0.0
