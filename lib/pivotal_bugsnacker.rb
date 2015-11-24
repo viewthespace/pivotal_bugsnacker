@@ -82,22 +82,22 @@ module PivotalBugsnacker
 
     class << self
 
-      def errors pages: 1
+      def errors pages: 1, per_page: 1
         errors = []
-        each_error pages: pages do |error|
+        each_error pages: pages, per_page: per_page do |error|
           errors << error
         end
         errors
       end
 
-      def each_error pages:10
-        errors = client.errors(project.id, per_page: 30, most_recent_event: true)
+      def each_error pages:10, per_page: 30
+        errors = client.errors(project.id, per_page: per_page, most_recent_event: true)
         last_response = client.last_response
         count = 0
         loop do
           count+=1
           errors.each{ |error| yield error }
-          break if errors.nil? || errors.length < 30 || count >= pages
+          break if errors.nil? || errors.length < per_page || count >= pages
           last_response = last_response.rels[:next].get
           errors = last_response.data || []
         end
