@@ -57,7 +57,7 @@ module PivotalBugsnacker
       end
 
       def remember?(error)
-        REDIS.sismember 'event_ids', error.most_recent_event.id
+        REDIS.sismember('event_ids', error.most_recent_event.id) if error.most_recent_event
       end
 
     end
