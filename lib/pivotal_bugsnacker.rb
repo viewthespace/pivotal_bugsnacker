@@ -53,7 +53,7 @@ module PivotalBugsnacker
     class << self
 
       def remember!(error)
-        REDIS.sadd('event_ids', error.most_recent_event.id)
+        REDIS.sadd('event_ids', error.most_recent_event.id) if error.most_recent_event
       end
 
       def remember?(error)
