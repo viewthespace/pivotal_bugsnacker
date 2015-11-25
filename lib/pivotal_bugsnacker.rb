@@ -73,6 +73,7 @@ module PivotalBugsnacker
 
     def bugsnack! pages: DEFAULT_PAGES, per_page: DEFAULT_PER_PAGE
       Bugsnag.each_error(pages: pages, per_page: per_page) do |error|
+        puts "processing: #{error.html_url}"
         unless EventMemory.remember?(error)
           story = Tracker.story_for_error(error)
           if story
