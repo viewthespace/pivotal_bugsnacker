@@ -67,9 +67,11 @@ module PivotalBugsnacker
 
   class << self
 
+    DEFAULT_PER_PAGE = ENV.fetch('DEFAULT_PAGE_SIZE', 30).to_i
+    DEFAULT_PAGES = ENV.fetch('DEFAULT_PAGES', 50).to_i
 
 
-    def bugsnack! pages:200, per_page: 30
+    def bugsnack! pages: DEFAULT_PAGES, per_page: DEFAULT_PER_PAGE
       Bugsnag.each_error(pages: pages, per_page: per_page) do |error|
         unless EventMemory.remember?(error)
           story = Tracker.story_for_error(error)
