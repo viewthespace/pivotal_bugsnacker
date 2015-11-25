@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = PivotalBugsnacker::VERSION
   spec.authors       = ["Karl Baum"]
   spec.email         = ["karl.baum@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Reads bugs from bugsnag and updates linked pivotal tracker ticket with meta data}
+  spec.description   = %q{Reads bugs from bugsnag and updates linked pivotal tracker ticket with meta data}
+  spec.homepage      = "https://github.com/viewthespace/pivotal_bugsnacker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
