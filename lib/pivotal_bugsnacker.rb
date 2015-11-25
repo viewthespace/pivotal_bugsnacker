@@ -164,7 +164,7 @@ module PivotalBugsnacker
       end
 
       def client
-        @client ||= ::Bugsnag::Api::Client.new(auth_token: ENV['BUGSNAG_DEPLOY_API_KEY'])
+        @client ||= ::Bugsnag::Api::Client.new(auth_token: ENV['BUGSNAG_API_KEY'])
       end
 
     end
