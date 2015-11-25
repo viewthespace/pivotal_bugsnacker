@@ -4,8 +4,11 @@ Script for adding useful bugsnag information to pivotal tracker bugs that are li
 
 For example, a pivotal tracker item with the title:
 
-Failed to create comment because activity_log_iteration_id of 0 was not found
-Will be updated to say: [users:2,last_received:11/19/2015 11:57AM,occurrences:4] Failed to create comment because activity_log_iteration_id of 0 was not found
+    Failed to create comment because activity_log_iteration_id of 0 was not found
+
+Will be updated to say: 
+
+    [users:2,last_received:11/19/2015 11:57AM,occurrences:4] Failed to create comment because activity_log_iteration_id of 0 was not found
 
 Where users is the number of users, last_received is the last time the error was seen, and occurences is the number of times the bug happened.
 
