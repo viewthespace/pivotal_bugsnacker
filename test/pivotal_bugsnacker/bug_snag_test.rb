@@ -7,11 +7,17 @@ module PivotalBugsnacker
     describe 'retreive erorrs after a certain time' do
 
       it 'only returns errors from the last 10 minutes' do
-        VCR.use_cassette('errors_after', record: :new_episodes) do
+        VCR.use_cassette('errors_after', record: :none) do
           time = Time.parse('2015-11-26 12:08:25 -0500')
           errors = Bugsnag.each_error(after: time) do |error|
             Time.parse(error.last_received).must_be :>, time
           end
+        end
+      end
+
+      it 'can handle after being nil' do
+        VCR.use_cassette('errors_after_is_nil', record: :new_episodes) do
+          Bugsnag.each_error(pages:1, per_page: 2, after: nil){ }
         end
       end
 

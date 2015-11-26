@@ -71,7 +71,7 @@ module PivotalBugsnacker
       end
 
       def last_received
-        REDIS['most_recent_received']
+        Time.parse(REDIS['most_recent_received']) if REDIS['most_recent_received']
       end
 
     end
@@ -86,7 +86,7 @@ module PivotalBugsnacker
 
 
     def bugsnack! pages: DEFAULT_PAGES, per_page: DEFAULT_PER_PAGE
-      Bugsnag.each_error(pages: pages, per_page: per_page) do |error|
+      Bugsnag.each_error(pages: pages, per_page: per_page, after: EventMemory.last_received) do |error|
         puts "processing: #{error.html_url}"
         unless EventMemory.remember?(error)
           story = Tracker.story_for_error(error)
@@ -164,16 +164,20 @@ module PivotalBugsnacker
       A_MONTH_AGO = Time.now - 2592000
 
       def each_error pages:10, per_page: 30, after: A_MONTH_AGO
+        after ||= A_MONTH_AGO
         errors = client.errors(project.id, per_page: per_page, most_recent_event: true)
         last_response = client.last_response
         count = 0
         loop do
           count+=1
           errors.each do |error|
-            break if Time.parse(error.last_received) < after
+            if Time.parse(error.last_received) < after
+              @break_last_received = true
+              break
+            end
             yield error
           end
-          break if errors.nil? || errors.length < per_page || count >= pages || errors.any?{|error| Time.parse(error.last_received) < after }
+          break if errors.nil? || errors.length < per_page || count >= pages || @break_last_received
           last_response = last_response.rels[:next].get
           errors = last_response.data || []
         end

@@ -15,7 +15,7 @@ module PivotalBugsnacker
           end
           error = errors.first
           EventMemory.remember_last_received!
-          EventMemory.last_received.must_equal error.last_received
+          EventMemory.last_received.must_equal Time.parse(error.last_received)
         end
       end
 
