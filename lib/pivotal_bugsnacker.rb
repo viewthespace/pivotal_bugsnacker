@@ -94,9 +94,10 @@ module PivotalBugsnacker
             puts "updating story #{story.name}"
             StoryUpdater.new(story: story, error: error).update!
           end
-          EventMemory.remember!(error)
         end
+        EventMemory.remember!(error)
       end
+      EventMemory.remember_last_received!
     end
 
     private
