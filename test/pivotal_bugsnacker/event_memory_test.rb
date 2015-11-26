@@ -20,9 +20,11 @@ module PivotalBugsnacker
       end
 
       it 'does not store null' do
-        EventMemory::REDIS['most_recent_received'] = Time.now.to_s
+        after = Time.now
+        EventMemory::REDIS['most_recent_received'] = after.to_s
         EventMemory.remember_last_received!
         EventMemory.last_received.wont_be_nil
+        EventMemory.last_received.to_i.must_equal after.to_i
       end
 
     end
