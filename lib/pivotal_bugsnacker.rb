@@ -67,7 +67,7 @@ module PivotalBugsnacker
       end
 
       def remember_last_received!
-        REDIS['most_recent_received'] = @most_recent_received
+        REDIS['most_recent_received'] = @most_recent_received if @most_recent_received
       end
 
       def last_received
