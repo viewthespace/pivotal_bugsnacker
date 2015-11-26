@@ -52,12 +52,26 @@ module PivotalBugsnacker
 
     class << self
 
+      def forget!
+        REDIS.flushdb
+        @most_recent_received = nil
+      end
+
       def remember!(error)
         REDIS.sadd('event_ids', error.most_recent_event.id) if error.most_recent_event
+        @most_recent_received ||= error.last_received
       end
 
       def remember?(error)
         REDIS.sismember('event_ids', error.most_recent_event.id) if error.most_recent_event
+      end
+
+      def remember_last_received!
+        REDIS['most_recent_received'] = @most_recent_received
+      end
+
+      def last_received
+        REDIS['most_recent_received']
       end
 
     end
